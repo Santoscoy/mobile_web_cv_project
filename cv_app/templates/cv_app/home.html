@@ -1,0 +1,148 @@
+{% extends 'cv_app/layout.html' %}
+{% block content %} 
+<div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="p-2 d-flex  flex-wrap justify-content-center gap-3">
+                
+                    <img class="me"src="{../../../../static/cv_app/me.jpg" alt="Victor Santoscoy">
+                
+        
+                    <div class="card-container"> 
+                        <h3>PROFILE</h3>
+                        <p>I wish to apply my knowledge and <br>talent and grow professionally with a <br>thriving team. I believe the skills I have <br> acquired through my education will be <br> valuable, especially for a company <br> looking to meet and exceed their goals.</p>
+                    </div>
+                
+                
+                    <div class="card-container">
+                        <p>
+
+                            <h4>PROGRAMATION LANGUAGES</h4>
+                            <ul>
+                                <li>Python (Junior);</li>
+                                <li>Java Script (Junior);</li>
+                                <li>C++ (Junior);</li>
+                                <li>Hyper Text Markup Language (Junior).</li>
+                            </ul>
+                        
+                        </p>
+                    </div>
+                    <div class="card-container">
+                            <h4>EDUACTION</h4>
+                            <h5>ENERGY ENGINEERING</h5>
+                            <p>University of Guadalajara | Tonala Campus | 2016 - 2022</p>
+                            <h5>AUTOMATIC CONTROL TECHNOLOGIST</h5>
+                            <p>Industrial Technical Eduaction Center | Colomos Campus | 2011 - 2015</p>
+                    </div>
+                    <div class="card-container">
+                        <p>
+
+                            <h4>LANGUAGES</h4>
+                            <ul>
+                                <li>English: B1;</li>
+                                <li>Italian: C1.</li>
+                                
+                            </ul>
+                        
+                        </p>
+                    </div>
+                    <div class="card-container">
+                        <h4>TALENTS</h4>
+                        <p>Fast learning, mathematical logic, good teamwork, communication skills, <br> failure diagnostic, problem solving, proactive.</p>
+                    
+                    </div>
+            </div>    
+        </div>
+        <div class="carousel-item"> 
+            <div class="p-2 d-flex me-auto ms-auto flex-wrap justify-content-center gap-3">
+                    <div class="card-container">
+                        <span>
+                            <h4>PYTHON PROGRAMMING: A CONSICE</h4>
+                            <h4>INTRODUCTION</h4>
+                            <h5>Coursera | Offered by wesleyan University</h5>
+                            <ul>
+                                <li>Writing functions in python;</li>
+                                <li>List, datatypes, libraries;</li>
+                                <li>Tuples,data dictionaries, text and CSV files;</li>
+                                <li>Functional values, sorting, formating, statistic;</li>
+                                <li>Writing a menu driven data base program.</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="card-container">
+                        <span>
+                            <h4>CRASH COURSE ON PYTHON</h4>
+                            <h5>Coursera | Offered by Google</h5>
+                            <ul>
+                                <li>Expressions and variables, functions, conditionals and loops;</li>
+                                <li>Management of strings, list and dictionaries;</li>
+                                <li>Recursion and callback functions;</li>
+                                <li>Object oriented programmind;</li>
+                                <li>Classes and Methods</li>
+                                <li>Writing a menu dr.</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="card-container">
+                        <span>
+                            <h4>JAVASCRIPT ESSENTIALS 1 2022</h4>
+                            <h5>Networking Academy| Offered by CISCO</h5>
+                            <ul>
+                                <li>Variables, datatypes, type casting  and comments;</li>
+                                <li>Operatos and user interaction;</li>
+                                <li>Control flow - Conditional execution and loops;</li>
+                                <li>Functions;</li>
+                                <li>Error, exceptions, debbuging and troubleshooting.</li>
+                            </ul>
+                        </span>
+                    </div>
+            </div>
+        </div>
+        <div class="carousel-item"> 
+            <div class="p-2 d-flex me-auto ms-auto flex-wrap justify-content-center gap-3">
+                <div class="card-container">
+                    <span>
+                        <h4>CONTACT</h4>
+                        <ul>
+                            <h5>EMAIL ADRESS:</h5>
+                            <li>victor.santoscoy1731@gmail.com</li>
+                            <h5>PHONE:</h5>
+                            <li>33-14-07-33-62</li>
+                            <h5>GitHub:</h5>
+                            <a class="link-cv" href="https://github.com/Santoscoy"><li class="link-cv">santoscoy</li></a>
+                            <h5>LinkedIn:</h5>
+                            <a class="link-cv" href="https://www.linkedin.com/in/victor-santoscoy-jimenez-678396105/"><li class="link-cv">Victor Santoscoy Jimenez</li></a>
+
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="p-2 d-flex align-items-center">
+                <div class="container">
+                    <form action="" method="post">{% csrf_token %}
+                        <div class="mb-3">
+                            <label for="" class="form-label label">Name:</label>
+                            {{form.name}}
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label label">Email address:</label>
+                            {{form.email}}
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label label">Subject:</label>
+                            {{form.subject}}
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label label">Message:</label>
+                            {{form.message}}
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-color">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
