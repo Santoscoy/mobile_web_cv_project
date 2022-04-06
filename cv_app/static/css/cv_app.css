@@ -27,7 +27,6 @@ body{
     min-height: 100vh; 
     font-family: 'Questrial',sans-serif;
     background-image: url('../cv_app/background_pc.png');
-    background-attachment: fixed;
     background-position: center center;
 }
 h1,
