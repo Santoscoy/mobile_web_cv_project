@@ -18,6 +18,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #Email settings
 
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
@@ -35,7 +37,10 @@ SECRET_KEY = 'django-insecure-b+z2@=d=5k()%*r!iq=u-gm#t-b$nb60dj7v@p_l(!rwma^st9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['santoscoycv.pythonanywhere.com']
+ALLOWED_HOSTS = [
+    'santoscoycv.pythonanywhere.com',
+    '127.0.0.1',
+]
 
 
 # Application definition
