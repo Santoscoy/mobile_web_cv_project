@@ -3,7 +3,16 @@ from .models import Email
 from .forms import EmailForm
 from django.conf import settings
 from django.core.mail import send_mail
+import re
 # Create your views here.
+
+def is_mobile(request):
+    """RETURNS TRUE IF THE REQUEST IS MADE FROM A MOBILE DEVICE"""
+    MOBILE_AGENT_RE=re.compile(r".*(iphone|mobile|androidtouch)",re.IGNORECASE)
+    if MOBILE_AGENT_RE.match(request.META['HTTP_USER_AGENT']):
+        return True
+    else:
+        return False
 
 def home(request):
     if request.method == "POST":
@@ -22,7 +31,13 @@ def home(request):
             return redirect('home')
     else:
         form = EmailForm()
-    context = {'form':form}
+
+    if is_mobile(request):
+        mobile = True
+    else:
+        mobile = False
+
+    context = {'form':form, 'mobile':mobile}
     return render(request, 'cv_app/home.html', context)
 
 
